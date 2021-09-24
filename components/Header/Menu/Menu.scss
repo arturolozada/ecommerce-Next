@@ -30,6 +30,7 @@
         &:hover {
           color: $font-light;
           background-color: $background-dark-absolute;
+
           &:before {
             background-color: $background-dark-absolute;
           }

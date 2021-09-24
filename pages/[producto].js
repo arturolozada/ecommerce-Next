@@ -3,7 +3,7 @@ import BasicLayout from '../layouts/BasicLayout';
 import { useRouter }  from 'next/router';
 import { getProductoByUrlApi } from '../api/producto';
 import HeaderProducto from '../components/Producto/HeaderProducto/HeaderProducto';
-import TabsProducto from '../components/Producto/TabsProducto/TabsProducto';
+//import TabsProducto from '../components/Producto/TabsProducto/TabsProducto';
 import Seo from '../components/Seo';
 
 export default function Producto() {
@@ -22,8 +22,7 @@ export default function Producto() {
         <BasicLayout className="producto">
             <Seo title={producto.title} />
             <HeaderProducto producto={producto} />
-            <TabsProducto producto={producto} />
+            {/* <TabsProducto producto={producto} /> */}
         </BasicLayout>
-    )
-    
+    );    
 }

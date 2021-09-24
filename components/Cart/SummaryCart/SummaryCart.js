@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { BASE_PATH } from '../../../utils/constants';
-import { Table, Image, Icon } from 'semantic-ui-react';
+import { Table, Image, Icon, Input, Button, Grid } from 'semantic-ui-react';
 import { forEach, map } from 'lodash';
 import useCart from '../../../hooks/useCart';
 
@@ -40,7 +39,7 @@ export default function (props) {
                             <Table.Row key={product.id} className="summary-cart__product">
                                 <Table.Cell>
                                     <Icon name="close" link onClick={() => removeProduct(product.url)} />
-                                    <Image src={`${BASE_PATH}${product.poster.url}`} alt={product.title} />
+                                    <Image src={product.poster.url} alt={product.title} />
                                     {product.title}
                                 </Table.Cell>
                                 <Table.Cell>{product.platform.title}</Table.Cell>
@@ -48,7 +47,6 @@ export default function (props) {
                                 <Table.Cell>$ {product.price.toFixed(2)}</Table.Cell>
                             </Table.Row>
                         ))}
-
                         <Table.Row className="summary-cart__resumen">
                             <Table.Cell className="clear"/>
                             <Table.Cell colSpan="2">Total :</Table.Cell>

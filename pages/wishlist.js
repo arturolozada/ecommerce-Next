@@ -7,7 +7,7 @@ import useAuth from '../hooks/useAuth';
 import ListaProductos from '../components/ListaProductos';
 import Seo from '../components/Seo';
 
-export default function wishlist() {
+export default function Wishlist() {
     const [productos, setPoductos] = useState(null);
     const { auth, logout } = useAuth();
 

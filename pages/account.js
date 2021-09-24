@@ -11,7 +11,7 @@ import BasicModal from '../components/Modal/BasicModal';
 import AddressForm from '../components/Account/AddressForm';
 import ListAddress from '../components/Account/ListAddress/ListAddress';
 
-export default function account() {
+export default function Account() {
     const [user, setUser] = useState(undefined);
     const { auth, logout, setReloadUser } = useAuth();
     const router = useRouter();

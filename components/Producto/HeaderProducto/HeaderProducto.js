@@ -6,6 +6,7 @@ import useAuth from '../../../hooks/useAuth';
 import useCart from '../../../hooks/useCart';
 import { size }  from 'lodash';
 import { isFavoriteApi, addFavoriteApi, deleteFavoriteApi } from '../../../api/favorite';
+import CarouselScreenShots from '../CarouselScreenShots';
 
 export default function HeaderProducto(props) {
     const {producto} = props;
@@ -16,7 +17,8 @@ export default function HeaderProducto(props) {
     return (
         <Grid className="header-game">
             <Grid.Column mobile={16} tablet={6} computer={5}>
-                <Image src={url1} alt={title} fluid />
+                <CarouselScreenShots title={producto.title} producto={producto}/>
+                {/* <Image src={url1} alt={title} fluid /> */}
             </Grid.Column>
             <Grid.Column mobile={16} tablet={10} computer={11}>
                 <Info producto={producto} />
@@ -74,7 +76,7 @@ function Info(props) {
                 <div className="header-game__buy-price">
                     <p>Precio de venta al público: ${price} </p>
                     <div className="header-game__buy-price-actions">
-                        <p>{descuento}%  </p>
+                        {descuento ? (<p>{descuento}%</p>) : (<p></p>)}
                         <p>${price + Math.floor(price * descuento) / 100} </p>
                     </div>
                 </div>

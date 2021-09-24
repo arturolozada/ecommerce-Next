@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { BASE_PATH } from '../../../utils/constants';
 import { Image, Icon } from 'semantic-ui-react';
 import Link from 'next/link';
 import moment from  'moment';
@@ -19,7 +18,7 @@ export default function Order(props) {
                     <div className="order__info-data">
                         <Link href={`/${url}`}>
                             <a>
-                                <Image src={`${BASE_PATH}${poster.url}`} alt={title} />
+                                <Image src={poster.url} alt={title} />
                             </a>
                         </Link>
                         <div>

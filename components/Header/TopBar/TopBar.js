@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Grid, Image, Input} from "semantic-ui-react"
+import { Container, Grid, Image, Input, Flag } from "semantic-ui-react"
 import Link from "next/link";
 import { useRouter } from 'next/router';
 
@@ -25,12 +25,11 @@ function Logo() {
     return (
         <Link href="/">
             <a>
-                <Image src="/logopas.png" alt="Gaming"/>
+                <Image src="/logopas.png" alt="Productos"/>
             </a>
-        </Link>
-        
-    )
-}
+        </Link>        
+    );
+};
 
 function Search() {
     const [searchStr, setSearchStr] = useState("");
@@ -53,3 +52,12 @@ function Search() {
         />
     )
 }
+
+// function DatosC() {
+//     return (
+//         <div>
+//             <p>tel: <Flag name="co"/>+57 316 4470715 </p>
+//             Cra 37A # 25 – 52
+//         </div>
+//     );
+// }

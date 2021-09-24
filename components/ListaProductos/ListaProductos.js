@@ -1,5 +1,4 @@
 import React from 'react';
-import { BASE_PATH } from '../../utils/constants';
 import { map } from 'lodash';
 import { Image, Grid } from 'semantic-ui-react';
 import Link from 'next/link';
@@ -38,17 +37,18 @@ export default function ListaProductos(props) {
 
 function Produ(props) {
     const {producto} = props;
-    const url1 = `${BASE_PATH}${producto.poster.url}`
+    const {poster} = producto;
+    const {url} = poster;
+
     return (
         <Grid.Column className="list-games__game">
             <Link href={`/${producto.url}`}>
                 <a>
                     <div className="list-games__game-poster">
-                        <Image src={url1} alt={producto.title} />
+                        <Image src={url} alt={producto.title} />
                         <div className="list-games__game-poster-info">
                             {producto.descuento ? (
-                                <span className="discount">{producto.descuento}%</span
-                            >) : (<span />)}
+                                <span className="discount">{producto.descuento}%</span>) : (<span />)}
                             <span className="price">${producto.price}</span>
                         </div>
                     </div>

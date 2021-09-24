@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactPlayer from 'react-player/lazy';
+//import ReactPlayer from 'react-player/lazy';
 import CarouselScreenShots from '../CarouselScreenShots';
 
 export default function InfoProducto(props) {
@@ -7,8 +7,8 @@ export default function InfoProducto(props) {
     
     return (
         <div className="info-game">
-            <ReactPlayer className="info-game__video" url={producto.video} controls={true} />
-            <CarouselScreenShots title={producto.title} producto={producto}/>
+            {/* <ReactPlayer className="info-game__video" url={producto.video} controls={true} /> */}
+            {/* <CarouselScreenShots title={producto.title} producto={producto}/> */}
         </div>
     )
 }

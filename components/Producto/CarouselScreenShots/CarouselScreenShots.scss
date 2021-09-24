@@ -1,7 +1,10 @@
 .carousel-screenshots {
   margin: 0 -5px;
-  width: 350px;
-  height: 400px;
+
+  .img {
+    width: 300px;
+    height: 300px;
+  }
 
   .slick-slide {
     padding: 5px;

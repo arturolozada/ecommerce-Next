@@ -61,4 +61,12 @@
       }
     }
   }
+
+  &__cent {
+    img {
+      color: $primary !important;
+      width: 50px !important;
+      justify-content: center !important;
+    }
+  }
 }

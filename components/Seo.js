@@ -12,7 +12,6 @@ export default function Seo(props) {
     );
 }
 
-
 Seo.defaultProps = {
     title: "Tu línea de maquillaje favorita",
     description: "Tu línea de maquillaje, al mejor precio"

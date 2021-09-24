@@ -38,8 +38,8 @@ export default function FormPayment(props) {
             );
 
             if(size(response) > 0) {
-                toast.success("Pedido completado");
                 removeAllProductsCart();
+                toast.success("Pedido completado");
                 router.push("/orders");
             } else {
                 toast.error("Error al realizar el pedido");

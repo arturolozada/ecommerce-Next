@@ -48,7 +48,7 @@ export function removeProductCart(product) {
         return item === product;
     });
 
-    if(size(cart) >0) {
+    if(size(cart) > 0) {
         localStorage.setItem(CART, cart);
     } else {
         localStorage.removeItem(CART);
@@ -83,5 +83,5 @@ export async function paymenCartApi(token, products, idUser, address, logout) {
 }
 
 export function removeAllProductsCart() {
-    return localStorage.removeItem(CART);
+    localStorage.removeItem(CART);    
 }

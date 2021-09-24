@@ -4,6 +4,7 @@ export async function getLastProductApi(limit) {
     try {
         const limitItems = `_limit=${limit}`;
         const sortItem = `_sort=createdAt:desc`
+        const platform = "Kit de Belleza"
         const url = `${BASE_PATH}/productos?${limitItems}&${sortItem}`;
         const response = await fetch(url);
         const result = await response.json();

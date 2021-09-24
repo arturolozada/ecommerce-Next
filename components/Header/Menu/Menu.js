@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Container, Menu, Grid, Icon, Label } from "semantic-ui-react";
+import { Container, Menu, Grid, Icon, Label, Dropdown } from "semantic-ui-react";
 import { map } from 'lodash';
 import Link from "next/link";
 import BasicModal from '../../Modal/BasicModal/BasicModal';
@@ -9,7 +9,6 @@ import useCart from '../../../hooks/useCart';
 import { getMeApi } from '../../../api/user';
 import { getPlatformApi } from '../../../api/platform';
 
-
 export default function MenuWeb() {
     const [platforms, setPlatforms] = useState([]);
     const [showModal, setShowModal] = useState(false);
@@ -17,7 +16,7 @@ export default function MenuWeb() {
     const [user, setUser] = useState(undefined);
     const { auth, logout } = useAuth();
 
-    useEffect(() => {
+    useEffect(() => { 
        (async () => {
            const response = await getMeApi(logout);
            setUser(response);
@@ -36,10 +35,10 @@ export default function MenuWeb() {
 
     return (
         <div className="menu">
-            <Container>
+            <Container fluid>
                 <Grid>
                     <Grid.Column className="menu__left" width={6}>
-                        <MenuPlataforms platforms={platforms} />
+                        <MenuPlatforms platforms={platforms} />
                     </Grid.Column>
                     <Grid.Column className="menu__right" width={10}>
                         {user !== undefined && (
@@ -63,7 +62,7 @@ export default function MenuWeb() {
     )
 }
 
-function MenuPlataforms(props) {
+function MenuPlatforms(props) {
     const { platforms } = props;
 
     return (
@@ -85,11 +84,23 @@ function MenuOptions(props) {
 
     return (
         <Menu>
+            <Menu.Item as="a">
+                Nosotros
+            </Menu.Item>
+            <Menu.Item as="a">
+                Visión
+            </Menu.Item>
+            <Menu.Item as="a">
+                Misión
+            </Menu.Item>
+            <Menu.Item as="a">
+                Aviso Legal
+            </Menu.Item>
             {user ? (
                 <>
                     <Link href="/orders">
                         <Menu.Item as="a">
-                            <Icon name="game" />
+                            <Icon name="dolly" />
                             Mis Pedidos
                         </Menu.Item>
                     </Link>

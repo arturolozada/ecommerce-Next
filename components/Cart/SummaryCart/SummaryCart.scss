@@ -29,6 +29,11 @@
         }
       }
     }
+
+    boton {
+      display: flex !important;
+      text-align: center;
+    }
   }
 
   &__resumen {

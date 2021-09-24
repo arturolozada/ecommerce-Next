@@ -7,7 +7,7 @@ import {searchProductosApi} from '../api/producto';
 import ListaProductos from '../components/ListaProductos/ListaProductos';
 
 
-export default function search() {
+export default function Search() {
     const [productos, setProductos] = useState(null);
     const { query } = useRouter();
         
